@@ -4,3 +4,4 @@ The package consist of two nodes. First node, named joy_node, reads data from jo
 
 To run this package:
 1. Install joystick package: sudo apt-get install ros-kinetic-joy 
+2. Install joystick package: sudo apt-get install ros-kinetic-joy 
