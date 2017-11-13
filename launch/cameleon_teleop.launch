@@ -1,7 +1,7 @@
 <launch>
     <!-- Cameleon Joystick Handler Node-->
-     <node pkg="cameleon_teleop" type="cameleon_teleop" name="cameleon_teleop"/>
-     <remap from="/cameleon/cmd_vel" to="/cmd_vel" />
+     <node pkg="cameleon_teleop" type="cameleon_teleop" name="cameleon_teleop" output="screen"/>
+     <!--remap from="/cameleon/cmd_vel" to="/cmd_vel" /-->
     <!-- Joystick node -->
      <node pkg="joy" type="joy_node" name="joy_node" >
       <param name="dev" type="string" value="/dev/input/js1" />
@@ -11,7 +11,7 @@
    <!-- Axes -->
    <param name="axis_linear" value="1" type="int"/>
    <param name="axis_angular" value="0" type="int"/>
-   <param name="scale_linear" value="2" type="double"/>
-   <param name="scale_angular" value="2" type="double"/>
+   <param name="scale_linear" value="1" type="double"/>
+   <param name="scale_angular" value="0.2" type="double"/>
  </launch>
 

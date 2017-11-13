@@ -94,7 +94,7 @@ int main(int argc, char** argv)
 	nh.param("scale_linear", linearGain, 0.2);
 	nh.param("scale_flipper", flipperGain, 0.2);
 
-	vel_pub_ = nh.advertise<geometry_msgs::Twist>("cameleon/cmd_vel", 1);
+	vel_pub_ = nh.advertise<geometry_msgs::Twist>("cmd_vel_twist", 1);
 	joy_sub_ = nh.subscribe<sensor_msgs::Joy>("joy", 10, joyCallback);
 	cmd_sub_ = nh.subscribe<geometry_msgs::Twist>("cmd", 10, cmdCallback);
 	flipperSub = nh.subscribe("/flipperVelocity", 1, flipperCallback);
